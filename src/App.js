@@ -1,4 +1,4 @@
-import ExpenseItem from './Components/Expenses/ExpenseItem';
+import Expenses from './Components/Expenses/Expenses';
 
 const INITIAL_EXPENSES = [
   {
@@ -61,12 +61,8 @@ const INITIAL_EXPENSES = [
 const App = () => {
   return (
     <div>
-      <h2>Expense Tracker</h2>
-      <ExpenseItem
-        date={INITIAL_EXPENSES[0].date}
-        title={INITIAL_EXPENSES[0].title}
-        amount={INITIAL_EXPENSES[0].amount}
-      />
+      <h2 style={{ textAlign: 'center' }}>Expense Tracker</h2>
+      <Expenses items={INITIAL_EXPENSES} />
     </div>
   );
 };
