@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Expenses from './Components/Expenses/Expenses';
 import NewExpense from './Components/NewExpense/NewExpense';
 
@@ -59,17 +60,18 @@ const INITIAL_EXPENSES = [
   },
 ];
 
-const addExpenseHandler = expense => {
-  INITIAL_EXPENSES.push(expense);
-  console.log(INITIAL_EXPENSES);
-};
-
 const App = () => {
+  const [expenses, setExpenses] = useState(INITIAL_EXPENSES);
+
+  const addExpenseHandler = expense => {
+    setExpenses(prevExpenses => [expense, ...prevExpenses]);
+  };
+
   return (
     <div>
       <h2 style={{ textAlign: 'center' }}>Expense Tracker</h2>
       <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses items={INITIAL_EXPENSES} />
+      <Expenses items={expenses} />
     </div>
   );
 };
