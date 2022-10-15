@@ -73,3 +73,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 </details>
+
+Small React app with opportunity to show and filter expenses by year and adding new expense which will be saved in app state.
+![expense-tracker-scr](https://user-images.githubusercontent.com/103335620/196003180-85d6bdd4-7a36-4c9c-9bce-06cbad1c4753.png)
