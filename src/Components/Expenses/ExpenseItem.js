@@ -1,15 +1,17 @@
 import Card from '../UI/Card';
 import ExpenseDate from './ExpenseDate';
-import './ExpenseItem.css';
+import styles from './ExpenseItem.module.css';
 
 const ExpenseItem = props => {
   return (
     <li>
-      <Card className="expense-item">
+      <Card className={styles['expense-item']}>
         <ExpenseDate date={props.date} />
-        <div className="expense-item__description">
+        <div className={styles['expense-item__description']}>
           <h2>{props.title}</h2>
-          <div className="expense-item__price ">&#8372; {props.amount}</div>
+          <div className={styles['expense-item__price']}>
+            &#8372; {props.amount}
+          </div>
         </div>
       </Card>
     </li>
